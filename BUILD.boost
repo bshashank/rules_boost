@@ -724,12 +724,15 @@ boost_library(
 
 boost_library(
     name = "date_time",
+    hdrs = glob(["libs/date_time/src/**/*.hpp"]),
+    srcs = glob(["libs/date_time/src/**/*.cpp"]),
     deps = [
         ":algorithm",
         ":io",
         ":lexical_cast",
         ":mpl",
         ":operators",
+        ":smart_ptr",
         ":static_assert",
         ":tokenizer",
         ":type_traits",
